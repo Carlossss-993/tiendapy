@@ -1,0 +1,10 @@
+LAC001|Leche deslactosada Alqueria 1L|Lacteos|4200.0|35|10|Alqueria
+LAC002|Yogurt Yogo Yogo en vaso 150g|Lacteos|2500.0|40|10|Alpina
+BEB001|Gaseosa Postobon manzana 1.5L|Bebidas|5800.0|8|12|Postobon
+BEB002|Jugo Hit de Naranja 1L|Bebidas|4500.0|0|5|Hit
+ABA001|Arroz Roa 1kg|Abarrotes|4000.0|50|15|Roa
+ABA002|Aceite Vegetal Premier 900ml|Abarrotes|11500.0|3|10|Premier
+ASE001|Detergente Ariel 1.5kg|Aseo|12000.0|20|5|Ariel
+ASE002|Jabon Dove 100g|Aseo|3500.0|15|5|Dove
+SNK001|Doritos Nacho Cheese 170g|Snacks|7000.0|25|10|Doritos
+SNK002|Cheetos BBQ 120g|Snacks|6500.0|30|10|Cheetos

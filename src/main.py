@@ -1,9 +1,8 @@
 import sys
 import os
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
 
 from persistence import load_inventory, save_inventory, load_sales
 from inventory import (
@@ -42,7 +41,7 @@ def inventory_menu(inventory: dict) -> None:
         print("6. Ver inventario completo")
         print("0. Volver al menú principal")
 
-        option = get_int("Seleccione una opción: ", positive_only=True, allow_zero=True)
+        option = get_int("Seleccione una opción: ")
 
         try:
             if option == 1:
@@ -50,8 +49,8 @@ def inventory_menu(inventory: dict) -> None:
                 name = get_string("Nombre del producto: ")
                 category = get_category()
                 price = get_float("Precio de venta (COP): ")
-                stock = get_int("Stock inicial: ", positive_only=True, allow_zero=True)
-                min_stock = get_int("Stock mínimo de alerta: ", positive_only=True, allow_zero=True)
+                stock = get_int("Stock inicial: ")
+                min_stock = get_int("Stock mínimo de alerta: ")
                 supplier = get_string("Nombre del proveedor: ")
 
                 add_product(inventory, code, name, category, price, stock, min_stock, supplier)
@@ -85,7 +84,7 @@ def inventory_menu(inventory: dict) -> None:
                 new_price = get_float("Nuevo precio: ") if change_price else None
 
                 change_stock = get_bool("¿Desea cambiar el stock?")
-                new_stock = get_int("Nuevo stock: ", positive_only=True, allow_zero=True) if change_stock else None
+                new_stock = get_int("Nuevo stock: ") if change_stock else None
 
                 if new_price is not None or new_stock is not None:
                     update_product(inventory, code, price=new_price, stock=new_stock)
@@ -136,7 +135,7 @@ def main():
             print("5. Guardar inventario")
             print("6. Salir")
 
-            option = get_int("Seleccione una opción: ", positive_only=True, allow_zero=True)
+            option = get_int("Seleccione una opción: ")
 
             try:
                 if option == 1:

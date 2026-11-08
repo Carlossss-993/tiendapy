@@ -9,36 +9,22 @@ def get_string(prompt: str) -> str:
         print("Error: El texto no puede estar vacío. Intente de nuevo.")
 
 
-def get_int(prompt: str, positive_only: bool = True, allow_zero: bool = False) -> int:
+def get_int(prompt: str) -> int:
     while True:
         try:
             value = int(input(prompt).strip())
-            if positive_only:
-                if allow_zero and value < 0:
-                    print("Error: El valor no puede ser negativo.")
-                    continue
-                if not allow_zero and value <= 0:
-                    print("Error: El valor debe ser mayor a 0.")
-                    continue
             return value
         except ValueError:
-            print("Error: Entrada inválida. Debe ingresar un número entero válido.")
+            print("Error: Entrada invalida. Debe ingresar un numero entero valido.")
 
 
-def get_float(prompt: str, positive_only: bool = True, allow_zero: bool = False) -> float:
+def get_float(prompt: str) -> float:
     while True:
         try:
             value = float(input(prompt).strip())
-            if positive_only:
-                if allow_zero and value < 0:
-                    print("Error: El valor no puede ser negativo.")
-                    continue
-                if not allow_zero and value <= 0:
-                    print("Error: El valor debe ser mayor a 0.")
-                    continue
             return value
         except ValueError:
-            print("Error: Entrada inválida. Debe ingresar un número decimal válido.")
+            print("Error: Entrada invalida. Debe ingresar un numero decimal valido.")
 
 
 def get_category() -> str:
@@ -48,7 +34,7 @@ def get_category() -> str:
         print(f"  {idx}. {cat}")
 
     while True:
-        user_input = input("Seleccione el número o escriba la categoría: ").strip()
+        user_input = input("Seleccione el numero o escriba la categoría: ").strip()
         if user_input.isdigit():
             index = int(user_input) - 1
             if 0 <= index < len(categories_list):
@@ -59,7 +45,7 @@ def get_category() -> str:
                 return cat
 
         options_str = ", ".join(categories_list)
-        print(f"Error: Categoría no válida. Opciones permitidas: {options_str}")
+        print(f"Error: Categoría no valida. Opciones permitidas: {options_str}")
 
 
 def get_bool(prompt: str) -> bool:

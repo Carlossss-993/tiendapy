@@ -2,7 +2,7 @@
 
 ## Carlos Sneider Fandiño Hernández - 20211020148
 
-Este proeycto es una aplicacion de consola desarrollada en Python para la gestion de inventario, procesamiento de ventas y generacion de reportes de la tienda de barrio "Don Aurelio". La solucion permite almacenar la información de manera permanente en archivos de texto plano (.txt) sin dependerr de bases de datos externas ni librerias complejas.
+Este proyecto es una aplicacion de consola desarrollada en Python para la gestion de inventario, procesamiento de ventas y generacion de reportes de la tienda de barrio "Don Aurelio". La solucion permite almacenar la información de manera permanente en archivos de texto plano (.txt) sin dependerr de bases de datos externas ni librerias complejas.
 
 ## Requisitos e Instalacion
 
@@ -62,7 +62,7 @@ tiendapy/
 * `data/inventario.txt`: Archivo de texto plano con la lista de productos del inventario.
 * `data/ventas.txt`: Archivo donde se registra el historial de ventas realizadas.
 
-## Decisiones de Diseño y Sustentación
+## Decisiones de Diseño
 
 En este proyecto tome variias decisiones de arquitectura y estructura para cumplir con todos los requerimientos y mantener el código dentro del alcance del curso:
 

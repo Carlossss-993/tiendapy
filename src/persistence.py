@@ -18,7 +18,7 @@ def load_inventory(filepath: str = INVENTORY_FILE) -> dict:
                     continue
                 parts = line.split("|")
                 if len(parts) != 7:
-                    print(f"Advertencia (Línea {line_num}): Estructura de línea inválida. Omitiendo.")
+                    print(f"Advertencia (Linea {line_num}): Estructura de linea inválida. Omitiendo.")
                     continue
                 try:
                     code, name, category, price_str, stock_str, min_stock_str, supplier = parts
@@ -32,7 +32,7 @@ def load_inventory(filepath: str = INVENTORY_FILE) -> dict:
                         "supplier": supplier
                     }
                 except (ValueError, IndexError):
-                    print(f"Advertencia (Línea {line_num}): Error de conversión en datos de producto. Omitiendo.")
+                    print(f"Advertencia (Linea {line_num}): Error de conversión en datos de producto. Omitiendo.")
     except Exception as e:
         print(f"Error al leer '{filepath}': {e}")
 
@@ -75,7 +75,7 @@ def load_sales(filepath: str = SALES_FILE) -> list:
                 if len(parts) < 3:
                     parts = line.split(" ", 2)
                     if len(parts) < 3:
-                        print(f"Advertencia (Ventas Línea {line_num}): Estructura corrupta. Omitiendo.")
+                        print(f"Advertencia (Ventas Linea {line_num}): Estructura corrupta. Omitiendo.")
                         continue
 
                 try:
@@ -96,7 +96,7 @@ def load_sales(filepath: str = SALES_FILE) -> list:
                         "items": items
                     })
                 except (ValueError, IndexError):
-                    print(f"Advertencia (Ventas Línea {line_num}): Error de parseo de venta. Omitiendo.")
+                    print(f"Advertencia (Ventas Linea {line_num}): Error de parseo de venta. Omitiendo.")
     except Exception as e:
         print(f"Error al leer ventas en '{filepath}': {e}")
 

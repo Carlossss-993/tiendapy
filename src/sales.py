@@ -55,7 +55,7 @@ def process_payment(total: float) -> float:
         return change
 
 
-def confirm_sale(cart: dict, inventory: dict, sales_filepath: str = "../data/sales.txt") -> float:
+def confirm_sale(cart: dict, inventory: dict) -> float:
     subtotal = calculate_subtotal(cart, inventory)
     _, discount_amount = calculate_discount(subtotal)
     total = subtotal - discount_amount
@@ -66,7 +66,7 @@ def confirm_sale(cart: dict, inventory: dict, sales_filepath: str = "../data/sal
         inventory[code]["stock"] -= qty
 
     date_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    save_sale(date_str, total, cart, sales_filepath)
+    save_sale(date_str, total, cart)
 
     return change
 

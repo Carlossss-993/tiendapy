@@ -1,4 +1,4 @@
-VALID_CATEGORIES = {"Lácteos", "Bebidas", "Aseo", "Abarrotes", "Snacks"}
+VALID_CATEGORIES = {"Lacteos", "Bebidas", "Aseo", "Abarrotes", "Snacks"}
 
 
 def get_string(prompt: str) -> str:

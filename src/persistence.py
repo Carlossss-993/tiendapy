@@ -1,7 +1,8 @@
 import os
 
-INVENTORY_FILE = "../data/inventory.txt"
-SALES_FILE = "../data/sales.txt"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+INVENTORY_FILE = os.path.join(BASE, "data", "inventario.txt")
+SALES_FILE = os.path.join(BASE, "data", "ventas.txt")
 
 
 def load_inventory(filepath: str = INVENTORY_FILE) -> dict:
